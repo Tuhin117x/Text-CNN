@@ -21,3 +21,10 @@ We use the Loss Curves and the Accuracy curves to determine what the ideal param
 For benchmarking our model, we run other standard classification models from the Sklearn library by using its pipeline functionality. We train these models first using only the text data and next by incorporating the co-ordinates of the bounding box of each textual component of the invoice. To our surprise, we find that the accuracy of these models decline on using the Layout information. In order to better incorporate structure + text information as a feature space, we also went ahead and incorporated an LSTM model with an input layer having Glove based word embeddings. You can download the glove embeddings from the Standford NLP team’s webpage, however, do note that these embedding files are very large, often times expanding up to five gigabytes of space.
 
 ![alt text](https://tuhin2nitdgp.files.wordpress.com/2021/11/modelbenchmarks.jpg)
+
+## Accessing the Code-Base
+
+<li>All the datasets used in this challenge are stored in this repository within the Datasets folder
+<li>The python scripts used for pre-processing the JSON files into csv format is present within the Pre-Processing folder
+<li>The benchmark models used for assessing relative accuracy are stored with the Benchmark Models folder
+<li>The final CNN model used for predicting Round 1 and Round 2 results is stored within the Production Model folder  
